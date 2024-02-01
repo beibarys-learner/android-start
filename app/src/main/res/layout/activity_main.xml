@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tvBaseLevel"
+        android:id="@+id/tvBaseLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -19,15 +19,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvTipPercentLabel"
+        android:id="@+id/tvTipPercent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="24%"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/tvBaseLevel"
-        app:layout_constraintTop_toBottomOf="@+id/tvBaseLevel" />
+        app:layout_constraintEnd_toEndOf="@+id/tvBaseLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvBaseLabel" />
 
     <TextView
         android:id="@+id/tvTipLabel"
@@ -36,8 +36,8 @@
         android:layout_marginTop="32dp"
         android:text="Tip"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toEndOf="@+id/tvTipPercentLabel"
-        app:layout_constraintTop_toBottomOf="@+id/tvTipPercentLabel" />
+        app:layout_constraintEnd_toEndOf="@+id/tvTipPercent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipPercent" />
 
     <TextView
         android:id="@+id/tvTotalLabel"
@@ -58,18 +58,18 @@
         android:hint="Bill Amount"
         android:inputType="numberDecimal"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvBaseLevel"
-        app:layout_constraintStart_toEndOf="@+id/tvBaseLevel"
-        app:layout_constraintTop_toTopOf="@+id/tvBaseLevel" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvBaseLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvBaseLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvBaseLabel" />
 
     <SeekBar
         android:id="@+id/seekBarTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:max="30"
-        app:layout_constraintBottom_toBottomOf="@+id/tvTipPercentLabel"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipPercent"
         app:layout_constraintStart_toStartOf="@+id/etBaseAmount"
-        app:layout_constraintTop_toTopOf="@+id/tvTipPercentLabel" />
+        app:layout_constraintTop_toTopOf="@+id/tvTipPercent" />
 
     <TextView
         android:id="@+id/tvTipAmount"
@@ -82,7 +82,7 @@
         tools:text="12%" />
 
     <TextView
-        android:id="@+id/tvTiptotalAmount"
+        android:id="@+id/tvTotalAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
