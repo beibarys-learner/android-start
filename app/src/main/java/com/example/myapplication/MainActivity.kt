@@ -25,5 +25,12 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        etBaseAmount = findViewById(R.id.etBaseAmount);
+        seekBarTip = findViewById(R.id.seekBarTip);
+        tvTipPercent = findViewById(R.id.tvTipPercent);
+        tvTipAmount = findViewById(R.id.tvTipAmount);
+        tvTotalAmount = findViewById(R.id.tvTotalAmount);
+
     }
 }
