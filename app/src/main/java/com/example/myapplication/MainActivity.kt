@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
                 Log.i(TAG, "onProgressChanged $progress")
                 tvTipPercentLabel.text = "$progress%"
                 computeTipTotal()
-1000
+100
             }
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
             }
@@ -45,19 +45,14 @@ class MainActivity : ComponentActivity() {
         })
         etBaseAmount.addTextChangedListener(object :TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
             }
-
             override fun onTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
-
             override fun afterTextChanged(s: Editable?) {
                 Log.i(TAG, "afterTextChanged $s")
                 computeTipTotal()
             }
-
         })
-
     }
 
     private fun computeTipTotal(){
@@ -76,6 +71,5 @@ class MainActivity : ComponentActivity() {
         // Update the UI
         tvTipAmount.text = "%.2f".format(tipAmount)
         tvTotalAmount.text = "%.2f".format(totalAmount)
-
     }
 }
