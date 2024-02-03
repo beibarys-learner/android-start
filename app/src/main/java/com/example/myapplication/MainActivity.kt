@@ -33,6 +33,7 @@ class MainActivity : ComponentActivity() {
 
         seekBarTip.progress = INITIAL_TIP_PERCENT
         tvTipPercentLabel.text = "$INITIAL_TIP_PERCENT%"
+        updateTipDescription(INITIAL_TIP_PERCENT)
 
         seekBarTip.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
@@ -60,7 +61,7 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun updateTipDescription(tipPercent: Int) {
-        val tipDescription = when (tipPercent){
+        val tipDescription = when(tipPercent){
             in 0..9 -> "Poor"
             in 10..14 -> "Acceptable"
             in 15..19 -> "Good"
@@ -68,7 +69,6 @@ class MainActivity : ComponentActivity() {
             else -> "Amazing"
         }
         tvTipDescription.text = tipDescription
-
     }
 
     private fun computeTipTotal(){
