@@ -64,8 +64,8 @@
 
     <SeekBar
         android:id="@+id/seekBarTip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="22dp"
         android:max="30"
         app:layout_constraintBottom_toBottomOf="@+id/tvTipPercentLabel"
         app:layout_constraintStart_toStartOf="@+id/etBaseAmount"
@@ -100,4 +100,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTipDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acceptable"
+        tools:layout_editor_absoluteX="196dp"
+        tools:layout_editor_absoluteY="140dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
